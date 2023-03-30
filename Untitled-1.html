@@ -5,6 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+  <a href="https://raw.githubusercontent.com/Benutzername/Repositoryname/Dateipfad/Dateiname"></a>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
 </head>
 <body>
 	<header>
@@ -20,11 +23,52 @@
     <li><a href="contact.html">Gimp</a></li>
   </ul>
 </nav>
+<div class="cursor">
+    <div class="click-animation">
+      <div class="shape circle big"></div>
+      <div class="shape circle small"></div>
+      <div class="shape triangle yellow"></div>
+      <div class="shape triangle green"></div>
+      <div class="shape disc"></div>
+    </div>
+  </div>
+
+  <div class="slider"></div>
+  
+  
+
+  <script>
+    const cursorAnimation = document.querySelector(".cursor");
+    const cursors = document.querySelectorAll(".cursor");
+
+    document.addEventListener("click", (e) => {
+      let x = e.clientX;
+      let y = e.clientY;
+
+      cursorAnimation.style.top = y + "px";
+      cursorAnimation.style.left = x + "px";
+
+      cursors.forEach((cursor) => {
+        cursor.classList.add("active");
+
+        function removeCursorActive(){
+          cursor.classList.remove("active");
+        }
+
+        setTimeout(removeCursorActive, 1000);
+      });
+      
+      let cursorClone = cursorAnimation.cloneNode(true);
+      document.querySelector("body").appendChild(cursorClone);
+
+      setTimeout(() => {
+        cursorClone.remove();
+      }, 1000);
+    });
+  </script>
 
           
-       </section>
-
-		<section>
+  
 		
 		</section>
 		<section>
@@ -33,58 +77,146 @@
 			<ul>
 				<li>
                    
-					<a href="https://www.deskmodder.de/blog/wp-content/uploads/2018/07/wallpaper.gif" target="_blank">
-						<img src="https://www.deskmodder.de/blog/wp-content/uploads/2018/07/wallpaper.gif" alt="Original" class="animiert">
-						<span>Original</span>
-                        <style>
-                            .animiert:hover{
-                                transition: transform 0.5s ease-out;
-                              transform-origin: center center;
-                                transform: scale(1.05);
-                                
-                            }
-                        
-                          </style>
-                        
-					</a>
-				</li>
-				<li>
-					<a href="https://img.fotocommunity.com/schoener-himmel-c1451930-d094-41d5-9789-62aad485f625.jpg?height=1080" target="_blank">
-						<img src="https://img.fotocommunity.com/schoener-himmel-c1451930-d094-41d5-9789-62aad485f625.jpg?height=1080" alt="Erste Veränderung" class="animiert">
-						<span>Erste Veränderung</span>
-                        <style>
-                            .animiert:hover{
-                                transition: transform 0.5s ease-out;
-                              transform-origin: center center;
-                                transform: scale(1.05);
-                                
-                            }
-                            
-                            
-                          </style>
-					</a>
-				</li>
-				<li>
-					<a href="https://img.fotocommunity.com/schoener-himmel-c1451930-d094-41d5-9789-62aad485f625.jpg?height=1080" target="_blank">
-						<img src="https://img.fotocommunity.com/schoener-himmel-c1451930-d094-41d5-9789-62aad485f625.jpg?height=1080" alt="Zweite Veränderung" class="animiert">
-						<span>Zweite Veränderung</span>
-						<hr>
-                        <style>
-                            .animiert:hover{
-                                transition: transform 0.5s ease-out;
-                              transform-origin: center center;
-                                transform: scale(1.05);
-                                
-                            }
-                            
-                          
-                          </style>
+					<div class="slider">
+            <div class="slides">
+              <!--radio buttons start-->
+              <input type="radio" name="radio-btn" id="radio1">
+              <input type="radio" name="radio-btn" id="radio2">
+              <input type="radio" name="radio-btn" id="radio3">
+              <input type="radio" name="radio-btn" id="radio4">
+              <input type="radio" name="radio-btn" id="radio5">
+              <!--radio buttons end-->
+              <!--slide images start-->
+              <div class="slide first">
+                <img src="IMG_0968.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="IMG_09685.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="IMG_09688.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="IMG_096881.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="IMG_096882.png" alt="">
+              </div>
+              <!--slide images end-->
+              <!--automatic navigation start-->
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+              </div>
+              <!--automatic navigation end-->
+            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+              <label for="radio4" class="manual-btn"></label>
+              <label for="radio5" class="manual-btn"></label>
+            </div>
+            <!--manual navigation end-->
+          </div>
+         <hr>
+
+         
+
+
+<!--2te Bilderreihe-->
+
+
+
+          <div class="sliders">
+            <div class="slidess">
+              <!--radio buttons start-->
+              <input type="radio" name="radio-btn" id="radio6">
+              <input type="radio" name="radio-btn" id="radio7">
+              <input type="radio" name="radio-btn" id="radio8">
+              <input type="radio" name="radio-btn" id="radio9">
+              <input type="radio" name="radio-btn" id="radio10">
+              <!--radio buttons end-->
+              <!--slide images start-->
+              <div class="slidee firstt">
+                <img src="IMG_1015.jpg" alt="">
+              </div>
+              <div class="slidee">
+                <img src="Baum_und_Himmel.jpg" alt="">
+              </div>
+              <div class="slidee">
+                <img src="Baum_und_Himmel_meer.jpg" alt="">
+              </div>
+              <div class="slidee">
+                <img src="https://www.nordlandblog.de/wp-content/uploads/2021/11/Gewaltige-Polarlichter-auf-den-Lofoten-in-Norwegen.jpg" alt="">
+              </div>
+              <div class="slidee">
+                <img src="https://image.geo.de/30140170/t/2b/v3/w1440/r1.5/-/nordlichter-f-216939353-jpg--79714-.jpg" alt="">
+              </div>
+              <!--slide images end-->
+              <!--automatic navigation start-->
+              <div class="navigationn-auto">
+                <div class="auto-btn6"></div>
+                <div class="auto-btn7"></div>
+                <div class="auto-btn8"></div>
+                <div class="auto-btn9"></div>
+                <div class="auto-btn10"></div>
+              </div>
+              <!--automatic navigation end-->
+            </div>
+            <!--manual navigation start-->
+            <div class="navigationn-manual">
+              <label for="radio6" class="manual-btnn"></label>
+              <label for="radio7" class="manual-btnn"></label>
+              <label for="radio8" class="manual-btnn"></label>
+              <label for="radio9" class="manual-btnn"></label>
+              <label for="radio10" class="manual-btnn"></label>
+            </div>
+            <!--manual navigation end-->
+          </div>
+          
 					</a>
 				</li>
 
 			</ul>
 		</section>
 
+   
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>About me</h4>
+  	 			<ul>
+  	 				<li><a href="impressum.html">Impressum</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>get help</h4>
+  	 			<ul>
+  	 				<li><a href="https://github.com/qwertyyyi/HTML-Datein.git">HTML</a></li>
+  	 				<li><a href="https://github.com/qwertyyyi/CSS-Datei.git">CSS</a></li>
+  	 				<li><a href="contact.html">GIMP</a></li>
+  	 				<li><a href="https://github.com/">GitHub</a></li>
+  	 			
+  	 			</ul>
+  	 		</div>
+  	 		
+  	 		<div class="footer-col">
+  	 			<h4>Website</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+             <a href="https://moodle.rbz-technik.de/"><img src="moodle-m-with-grid-1024x1024.png" alt="Logo" /></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
  
 
 
