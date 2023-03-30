@@ -24,6 +24,47 @@
     <li><a href="contact.html">Gimp</a></li>
   </ul>
 </nav>
+<div class="cursor">
+    <div class="click-animation">
+      <div class="shape circle big"></div>
+      <div class="shape circle small"></div>
+      <div class="shape triangle yellow"></div>
+      <div class="shape triangle green"></div>
+      <div class="shape disc"></div>
+    </div>
+  </div>
+
+  
+
+  <script>
+    const cursorAnimation = document.querySelector(".cursor");
+    const cursors = document.querySelectorAll(".cursor");
+
+    document.addEventListener("click", (e) => {
+      let x = e.clientX;
+      let y = e.clientY;
+
+      cursorAnimation.style.top = y + "px";
+      cursorAnimation.style.left = x + "px";
+
+      cursors.forEach((cursor) => {
+        cursor.classList.add("active");
+
+        function removeCursorActive(){
+          cursor.classList.remove("active");
+        }
+
+        setTimeout(removeCursorActive, 1000);
+      });
+      
+      let cursorClone = cursorAnimation.cloneNode(true);
+      document.querySelector("body").appendChild(cursorClone);
+
+      setTimeout(() => {
+        cursorClone.remove();
+      }, 1000);
+    });
+  </script>
 
           
        </section>
@@ -43,14 +84,14 @@
 		</section>
 		<section>
 			<h3>HTML</h3>
-      <p>Nun zeige ich euch hier den HTML teil von der Website der wichtig ist damit die Website und anderen Aspekte in überhaupt entstehen können <br>
+      <p>Nun zeige ich euch hier den HTML teil von der Website der wichtig ist damit die Website und anderen Aspekte überhaupt entstehen lassen zu können <br>
       </p>
-      <li><a href="https://github.com/qwertyyyi/CSS-Datei.git" class="active">HTML Datein über Github runterladen (Für alle Seiten)</a></li>
+      <li><a href="https://github.com/qwertyyyi/HTML-Datein.git" class="active">HTML Datein über Github runterladen (Für alle Seiten)</a></li>
       </li>
     </ul>
 <hr>
 				<h4>CSS</h4>
-				<p>Nun zeige ich euch hier den CSS teil von der Website der wichtig ist damit die Design und anderen Aspekte in erfüllung <br>
+				<p>Nun zeige ich euch hier den CSS teil von der Website der wichtig ist damit die Design und anderen Aspekte in erfüllung gehen können <br>
                     </p>
                     <li><a href="https://github.com/qwertyyyi/CSS-Datei.git" class="active">CSS Datein über Github runterladen (Für alle Seiten)</a></li>
                     </li>
