@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meine Website</title>
+     
+    
+      </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style...css">
+</head>
+<body>
+	<header>
+		<h1>Willkommen auf meiner Website!</h1>
+	</header>
+	<main>
+
+        <nav>
+  <ul>
+    <li><a href="Untitled-1.html" class="active">Home</a></li>
+    <li><a href="about.html">Tutorial</a></li>
+    <li><a href="services.html">HTML & CSS  </a></li>
+    <li><a href="contact.html">Gimp</a></li>
+  </ul>
+</nav>
+<div class="cursor">
+    <div class="click-animation">
+      <div class="shape circle big"></div>
+      <div class="shape circle small"></div>
+      <div class="shape triangle yellow"></div>
+      <div class="shape triangle green"></div>
+      <div class="shape disc"></div>
+    </div>
+  </div>
+
+  
+
+  <script>
+    const cursorAnimation = document.querySelector(".cursor");
+    const cursors = document.querySelectorAll(".cursor");
+
+    document.addEventListener("click", (e) => {
+      let x = e.clientX;
+      let y = e.clientY;
+
+      cursorAnimation.style.top = y + "px";
+      cursorAnimation.style.left = x + "px";
+
+      cursors.forEach((cursor) => {
+        cursor.classList.add("active");
+
+        function removeCursorActive(){
+          cursor.classList.remove("active");
+        }
+
+        setTimeout(removeCursorActive, 1000);
+      });
+      
+      let cursorClone = cursorAnimation.cloneNode(true);
+      document.querySelector("body").appendChild(cursorClone);
+
+      setTimeout(() => {
+        cursorClone.remove();
+      }, 1000);
+    });
+  </script>
+
+          
+       </section>
+
+		<section>
+			<h2>Impressum</h2>
+			<p></p>
+			<hr>
+      <p>
+        <h6>Persönliche Informationen</h6><br>
+        Mikail Redzovic<br>
+        Stauffenberigring 194<br>
+        24145 Kiel<br>
+        Deutschland<br>
+        <br>
+        <h6>Kontakt</h6><br>
+        Tel.: 0174738742<br>
+        Fax: +49 431 79966-77<br>
+       E-Mail: Meineemailschreibeichhiernichthin@gmail.com<br>
+        Internet: MeineWebsitekommtnichtonline.de<br>
+        </p>
+        <ul>
+           <li>
+		</section>
+		</section>
+
+
+		<section>
+			<div id="stars"></div>
+			<div id="stars2"></div>
+			<div id="stars3"></div>
+			<div id="title">
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Mikails Photoshop Website</p>
+	</footer>
+</body>
+
+
+
+
+</html>
